@@ -5,15 +5,21 @@ import './App.css'
 import General from './components/General.jsx';
 import Education from './components/Education.jsx';
 import Practical from './components/Practical.jsx';
+import Resume from './components/Resume.jsx';
 
 function App() {
 
   return (
     <>
-    <div className="container">
-      <General />
-      <Education />
-      <Practical />
+    <div className='wrapper'>
+      <div className="container">
+        <General />
+        <Education />
+        <Practical />
+      </div>
+      <div className="resume">
+        <Resume />
+      </div>
     </div>
     </>
   )
