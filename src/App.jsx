@@ -18,7 +18,7 @@ function App() {
         <Practical />
       </div>
       <div className="resume">
-        <Resume />
+        <Resume name="Anthony"/>
       </div>
     </div>
     </>
