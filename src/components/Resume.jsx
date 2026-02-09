@@ -1,21 +1,24 @@
 import React from 'react';
 import '../styles/Resume.css'
+import { useState } from 'react';
 
 export default function Resume() {
+  const [contact, setContact] = useState({name: "Anthony", email: "email@email.com", phone: "555-555-5555"});
+
   return (
     <div className="preview">
       <header className="header">
-        <h2>Your Name</h2>
+        <h2>{contact.name}</h2>
         <div className="contacts">
-          <span>Email</span>
+          <span>{contact.email}</span>
           <br>
           </br>
           <br></br>
-          <span>Phone</span>
+          <span>{contact.phone}</span>
         </div>
       </header>
       
-      <section classname="body">
+      <section classname="edu">
         <h3>Education</h3>
         <p>
           Degree
