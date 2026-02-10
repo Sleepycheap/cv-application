@@ -8,17 +8,21 @@ import Practical from './components/Practical.jsx';
 import Resume from './components/Resume.jsx';
 
 function App() {
+  const [contact, setContact] = useState({name: "", email: "", phone: ""})
+  const [practical, setPractical] = useState({company: "", title: "", responsibilities: "", from: "", until: ""})
+  const handleContact = (field, value) => setContact(prev => ({...prev, [field]: value}))
+  const handlePractical = (field, value) => setPractical(prev => ({...prev, [field]: value}))
 
   return (
     <>
     <div className='wrapper'>
       <div className="container">
-        <General />
+        <General data={contact} onChange={handleContact} />
         <Education />
-        <Practical />
+        <Practical data={practical} onChange={handlePractical}/>
       </div>
       <div className="resume">
-        <Resume name="Anthony"/>
+        <Resume contact={contact} practical={practical}/>
       </div>
     </div>
     </>

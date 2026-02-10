@@ -1,14 +1,15 @@
 import React from 'react';
 import '../styles/Resume.css'
 import { useState } from 'react';
+import Practical from './Practical';
+// import practical from './Practical';
 
-export default function Resume({name}) {
-  const [contact, setContact] = useState({name: "", email: "", phone: ""});
+export default function Resume({contact, practical}) {
 
   return (
     <div className="preview">
       <header className="header">
-        <h2>{name}</h2>
+        <h2>{contact.name}</h2>
         <div className="contacts">
           <span>{contact.email}</span>
           <br>
@@ -32,12 +33,10 @@ export default function Resume({name}) {
 
       <section className='body'>
         <h3>Experience</h3>
-        <p>
-          <strong>Position</strong>
-          <p>Company</p>
-        </p>
-        <p>Start - End</p>
-        <p>Responsibilities</p>      
+        <p>{practical.company}</p>
+        <p>{practical.title}</p>
+        <p>{practical.from}- {practical.until}</p>
+        <p>{practical.responsibilities}</p>      
       </section>
     </div>
   )

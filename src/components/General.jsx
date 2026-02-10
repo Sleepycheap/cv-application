@@ -1,19 +1,14 @@
 
-function General() {
+function General({data, onChange}) {
   return (
-    <>
-    <h1>Resume Maker</h1>
-    <form className='personal'>
-      <h2>Personal Information</h2>
-      <label for="fname">First Name: </label>
-      <input type="text" id="fname" name="fname"></input>
-      <label for="lname">Last Name: </label>
-      <input type="text" id="lname" name="lname"></input>
-      <label for="emailAddress">Email Address: </label>
-      <input type="email" id="emailAddress" name="emailAddress"></input>
-      <button type="submit">Submit</button>
-    </form>
-    </>
+    <div className="general">
+      <label>Name<input type="text" value={data.name} onChange=
+      {e => onChange('name', e.target.value)} /> </label>
+      <label>Email<input type="email" value={data.email} onChange=
+      {e => onChange('email', e.target.value)} /> </label>
+      <label>Phone<input type="tel" value={data.phone} onChange=
+      {e => onChange('phone', e.target.value)} /> </label>
+    </div>
   )
 }
 
