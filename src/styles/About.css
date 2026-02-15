@@ -1,0 +1,13 @@
+.about {
+  border-bottom: 2px solid white;
+  width: 50%;
+  margin-left: 10px;
+}
+
+#about-form {
+  border: 2px solid white;
+  display: grid;
+  gap: 10px;
+  margin-left: 10px;
+}
+

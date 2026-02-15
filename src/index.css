@@ -80,6 +80,7 @@ button:focus-visible {
   margin-left: 20px;
   justify-items: center;
   gap: 20px;
+  border: 10px solid gray;
 }
 
 .container {
@@ -88,4 +89,5 @@ button:focus-visible {
   /* margin-right: 20px; */
   flex: 2;
 }
+
 

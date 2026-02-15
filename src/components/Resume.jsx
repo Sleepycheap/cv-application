@@ -4,11 +4,12 @@ import { useState } from 'react';
 import Practical from './Practical';
 // import practical from './Practical';
 
-export default function Resume({contact, practical}) {
+export default function Resume({contact, education, practical}) {
 
   return (
     <div className="preview">
-      <header className="header">
+      <section className="general">
+        <h1>About Me</h1>
         <h2>{contact.name}</h2>
         <div className="contacts">
           <span>{contact.email}</span>
@@ -17,18 +18,15 @@ export default function Resume({contact, practical}) {
           <br></br>
           <span>{contact.phone}</span>
         </div>
-      </header>
+      </section>
       
-      <section classname="edu">
-        <h3>Education</h3>
-        <p>
-          Degree
-          <br>
-          </br>
-          <br></br>
-          School
-        </p>
-        <p>Date</p>
+      <section className="edu">
+        <h1>Education</h1>
+        <p>{education.school}</p>
+        <p>{education.fos}</p>
+        <p>{education.start}</p>
+        <p>{education.end}</p>
+
       </section>
 
       <section className='body'>

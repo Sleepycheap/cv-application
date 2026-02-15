@@ -1,13 +1,39 @@
+import { useState } from 'react';
+import '../styles/About.css';
 
-function General({data, onChange}) {
+function General({data, saveData}) {
+  // const [contact, setContact] = useState({name: "", email: "", phone: ""})
+  
+  function save(e) {
+    e.preventDefault();
+    const form = e.target
+    const formData = new FormData(form);
+    const formJson = Object.fromEntries(formData.entries());
+    const name = formJson.name;
+    const email = formJson.email;
+    const phone = formJson.phone;
+    saveData('name', name);
+    saveData('email', email);
+    saveData('phone', phone);
+    console.log(name);
+    // const name = target.name.value;
+    // const email = target.email.value;
+    // const phone = target.phone.value;
+    // onSubmit={name => onSubmit('name', name)}
+    // setContact(newContact)
+  }
+
+
   return (
     <div className="general">
-      <label>Name<input type="text" value={data.name} onChange=
-      {e => onChange('name', e.target.value)} /> </label>
-      <label>Email<input type="email" value={data.email} onChange=
-      {e => onChange('email', e.target.value)} /> </label>
-      <label>Phone<input type="tel" value={data.phone} onChange=
-      {e => onChange('phone', e.target.value)} /> </label>
+      <h1 className="about">About Me</h1>
+      <form onSubmit={save} id="about-form">
+        <label>Name<input type="text"  name="name"  /> </label> 
+        <label>Email<input type="email" name="email"  /> </label>
+        <label>Phone<input type="tel" name="phone"/> </label>
+        {/* /* onChange={e => onChange('name', e.target.value)} */ }
+        <button type="submit" >Save</button>
+      </form>
     </div>
   )
 }
