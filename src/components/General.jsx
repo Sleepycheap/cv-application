@@ -2,8 +2,13 @@ import { useState } from 'react';
 import '../styles/About.css';
 
 function General({data, saveData}) {
-  // const [contact, setContact] = useState({name: "", email: "", phone: ""})
-  
+ 
+  const [formEdit, setFormEdit] = useState(false);
+  const editForm = (e) => {
+    setFormEdit(!formEdit);
+  } 
+
+
   function save(e) {
     e.preventDefault();
     const form = e.target
@@ -15,12 +20,8 @@ function General({data, saveData}) {
     saveData('name', name);
     saveData('email', email);
     saveData('phone', phone);
-    console.log(name);
-    // const name = target.name.value;
-    // const email = target.email.value;
-    // const phone = target.phone.value;
-    // onSubmit={name => onSubmit('name', name)}
-    // setContact(newContact)
+    editForm()
+    console.log(formEdit)
   }
 
 
@@ -32,7 +33,10 @@ function General({data, saveData}) {
         <label>Email<input type="email" name="email"  /> </label>
         <label>Phone<input type="tel" name="phone"/> </label>
         {/* /* onChange={e => onChange('name', e.target.value)} */ }
-        <button type="submit" >Save</button>
+        {!formEdit && (
+          <button type="submit" className='save-btn'>Save</button>
+        )}
+        <button type="button" onClick={editForm} className='edit-btn'>Edit</button>
       </form>
     </div>
   )
