@@ -29,9 +29,9 @@ function General({data, saveData}) {
     <div className="general">
       <h1 className="about">About Me</h1>
       <form onSubmit={save} id="about-form">
-        <label>Name<input type="text"  name="name"  /> </label> 
-        <label>Email<input type="email" name="email"  /> </label>
-        <label>Phone<input type="tel" name="phone"/> </label>
+        <label id="name">Name<input type="text"  name="name" className='inpt-general' /> </label> 
+        <label id="email">Email<input type="email" name="email" className='inpt-general' /> </label>
+        <label id="phone">Phone<input type="tel" name="phone" className='inpt-general'/> </label>
         {/* /* onChange={e => onChange('name', e.target.value)} */ }
         {!formEdit && (
           <button type="submit" className='save-btn'>Save</button>

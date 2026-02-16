@@ -1,42 +1,31 @@
-.about {
+.prac-header {
   border-bottom: 2px solid white;
   width: 50%;
   margin-left: 10px;
 }
 
-#about-form {
-  /* border: 2px solid white; */
+#prac-form {
   display: grid;
   gap: 10px;
   margin-left: 10px;
-  /* width: 200px; */
 }
 
-/* .edit {
-  background-color: lightgray;
-} */
+.inpt-prac {
+  width: 800px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
 
-.save-btn {
+.save-prac {
   margin-left: 10px;
   width: 45%;
   background-color: #71797E
 }
 
-.edit-btn {
+.edit-prac {
   position: relative;
   left: 620px;
   bottom: 50px;
   width: 45%;
   background-color: #71797E;
-}
-
-/* #name {
-
-  width: 800p
-} */
-
-.inpt-general {
-  width: 800px;
-  margin-bottom: 10px;
-  margin-top: 10px;
 }

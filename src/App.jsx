@@ -22,8 +22,8 @@ function App() {
     <div className='wrapper'>
       <div className="container">
         <General data={contact} saveData={handleContact} />
-        <Education data={education} onChange={handleEducation}/>
-        <Practical data={practical} onChange={handlePractical}/>
+        <Education data={education} saveData={handleEducation}/>
+        <Practical data={practical} saveData={handlePractical}/>
       </div>
       <div className="resume">
         <Resume contact={contact} education={education} practical={practical}/>

@@ -9,10 +9,23 @@ header {
   gap: 60px;
 }
 
-.body {
-  border-bottom: 2px solid black;
-}
 
+/* 
 .edu {
   border-bottom: 2px solid black;
+} */
+.about-header {
+  margin-bottom: 0px;
 }
+
+.general-cv {
+  /* border-bottom: 2px solid black; */
+  display: grid;
+  gap: 10px;
+}
+
+/* .section-break {
+  border: 2px dotted black;
+  margin-top: 0px;
+  margin-bottom: 0px;
+} */
